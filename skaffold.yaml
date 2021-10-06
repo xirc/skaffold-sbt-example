@@ -1,0 +1,21 @@
+apiVersion: skaffold/v2beta21
+kind: Config
+metadata:
+  name: skaffold-sbt
+build:
+  artifacts:
+  - image: skaffold-sbt-app
+    custom:
+      buildCommand: sbt -v test skaffoldBuild
+      dependencies:
+        paths:
+          - build.sbt
+          - src/**
+        ignore:
+          - target/**
+deploy:
+  kubectl:
+    manifests:
+      - k8s/namespace.yaml
+      - k8s/auth.yaml
+      - k8s/app.yaml
