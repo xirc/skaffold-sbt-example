@@ -26,7 +26,6 @@ final class HttpManagement(system: ActorSystem[?]) {
     *
     * If doing something is needed after the server has been started,
     * use a returned `Future` instance that will be completed after the server starts.
-    *
     */
   def start(): Future[Done] = {
     implicit val ec: ExecutionContext = system.executionContext

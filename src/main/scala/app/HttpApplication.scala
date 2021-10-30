@@ -12,7 +12,7 @@ final class HttpApplication(
     system: ActorSystem[?]
 ) {
 
-  /** The setting to use  */
+  /** The setting to use */
   val settings: ApplicationHttpSettings =
     ApplicationHttpSettings(system)
 
@@ -31,7 +31,6 @@ final class HttpApplication(
     *
     * If doing something is needed after the server has been started,
     * use a returned `Future` instance that will be completed after the server starts.
-    *
     */
   def start(): Future[Done] = {
     implicit val sys: ActorSystem[?] = system

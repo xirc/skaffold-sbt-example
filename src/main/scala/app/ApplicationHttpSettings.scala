@@ -18,8 +18,7 @@ final class ApplicationHttpSettings(
   val port: Int =
     config.getInt("app.http.port")
 
-  /**
-    * The deadline(timeout) to wait for all in-flight HTTP requests completed.
+  /** The deadline(timeout) to wait for all in-flight HTTP requests completed.
     */
   val terminationHardDeadline: FiniteDuration =
     config.getDuration("app.http.termination-hard-deadline").toScala
