@@ -15,7 +15,6 @@ object TestConfig {
     *
     * This resolves all variable references at last.
     * The given string can override the variables defined in configuration files.
-    *
     */
   def resolveWith(inlineConfigSource: String): Config = {
     val inlineConfig =
