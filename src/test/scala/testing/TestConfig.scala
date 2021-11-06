@@ -7,14 +7,14 @@ object TestConfig {
   /** Resolves a [[Config]] from the given string and config sources
     *
     * This respects an upper config source than a lower one.
-    *  - The given string
-    *  - Environment Variables
-    *  - System Properties
-    *  - `application-test.conf`
-    *  - `reference.conf`
+    *   - The given string
+    *   - Environment Variables
+    *   - System Properties
+    *   - `application-test.conf`
+    *   - `reference.conf`
     *
-    * This resolves all variable references at last.
-    * The given string can override the variables defined in configuration files.
+    * This resolves all variable references at last. The given string can
+    * override the variables defined in configuration files.
     */
   def resolveWith(inlineConfigSource: String): Config = {
     val inlineConfig =
