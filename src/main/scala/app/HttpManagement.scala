@@ -21,11 +21,12 @@ final class HttpManagement(system: ActorSystem[?]) {
 
   /** Starts a Management HTTP server
     *
-    * Since this also registers the server to [[akka.actor.CoordinatedShutdown]],
-    * the server will be terminated gracefully following the manner of the CoordinatedShutdown.
+    * Since this also registers the server to
+    * [[akka.actor.CoordinatedShutdown]], the server will be terminated
+    * gracefully following the manner of the CoordinatedShutdown.
     *
-    * If doing something is needed after the server has been started,
-    * use a returned `Future` instance that will be completed after the server starts.
+    * If doing something is needed after the server has been started, use a
+    * returned `Future` instance that will be completed after the server starts.
     */
   def start(): Future[Done] = {
     implicit val ec: ExecutionContext = system.executionContext
