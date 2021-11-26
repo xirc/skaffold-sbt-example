@@ -1,5 +1,36 @@
 ---
 apiVersion: v1
+kind: Namespace
+metadata:
+  name: akka
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: akka
+  name: pod-reader
+rules:
+  - apiGroups: [""]
+    resources: ["pods"]
+    verbs: ["get", "watch", "list"]
+
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  namespace: akka
+  name: pod-read-access
+subjects:
+  - kind: User
+    name: system:serviceaccount:akka:default
+roleRef:
+  kind: Role
+  name: pod-reader
+  apiGroup: rbac.authorization.k8s.io
+
+---
+apiVersion: v1
 kind: Service
 metadata:
   namespace: akka
