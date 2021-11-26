@@ -16,6 +16,4 @@ build:
 deploy:
   kubectl:
     manifests:
-      - k8s/namespace.yaml
-      - k8s/auth.yaml
       - k8s/app.yaml
