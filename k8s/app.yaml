@@ -97,8 +97,6 @@ spec:
             requests:
               memory: 1024Mi
           env:
-            - name: AKKA_ACTOR_SYSTEM_NAME
-              value: my-app
             - name: AKKA_CLUSTER_NODE_HOSTNAME
               valueFrom:
                 fieldRef:

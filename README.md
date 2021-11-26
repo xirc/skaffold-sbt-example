@@ -25,8 +25,6 @@ curl http://127.0.0.1:8080/hello
 
 ## Environment Variables
 
-* `AKKA_ACTOR_SYSTEM_NAME (string, default="system")`  
-  Akka ActorSystem Name
 * `AKKA_CLUSTER_NODE_HOSTNAME (string, default="127.0.0.1")`  
   Akka Cluster Node Hostname
 * `APP_HTTP_HOSTNAME (string, default="127.0.0.1")`  

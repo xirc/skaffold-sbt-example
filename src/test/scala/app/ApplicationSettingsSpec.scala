@@ -8,7 +8,7 @@ final class ApplicationSettingsSpec
     extends ScalaTestWithActorTestKit
     with BaseSpecLike {
 
-  private val DefaultActorSystemName = "system"
+  private val DefaultActorSystemName = "my-app"
 
   "ApplicationSettings should have the default values" in {
 
