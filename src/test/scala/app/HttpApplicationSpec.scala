@@ -8,11 +8,11 @@ final class HttpApplicationSpec extends BaseScalatestRouteTest {
 
   private val httpApp = new HttpApplication(system.toTyped)
 
-  "/hello" in {
+  "/" in {
 
-    Get("/hello") ~> httpApp.route ~> check {
+    Get("/") ~> httpApp.route ~> check {
       assert(status === StatusCodes.OK)
-      assert(responseAs[String] === "hello world!")
+      assert(responseAs[String] === "Hello World!")
     }
 
   }

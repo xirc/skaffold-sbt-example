@@ -19,7 +19,7 @@ minikube start && minikube tunnel
 skaffold dev
 
 # Send a request to the deployed application
-curl http://127.0.0.1:8080/hello
+curl http://127.0.0.1:8080/
 ```
 
 

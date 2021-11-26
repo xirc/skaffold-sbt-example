@@ -3,7 +3,7 @@ package app
 import akka.Done
 import akka.actor.typed.ActorSystem
 import akka.http.scaladsl.Http
-import akka.http.scaladsl.server.Directives.{complete, get, path}
+import akka.http.scaladsl.server.Directives.*
 import akka.http.scaladsl.server.Route
 
 import scala.concurrent.{ExecutionContext, Future}
@@ -18,9 +18,9 @@ final class HttpApplication(
 
   /** The HTTP route this HTTP server serves */
   def route: Route =
-    path("hello") {
+    pathEndOrSingleSlash {
       get {
-        complete("hello world!")
+        complete("Hello World!")
       }
     }
 
