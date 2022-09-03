@@ -2,7 +2,7 @@ lazy val AkkaVersion = "2.6.19"
 lazy val AkkaHttpVersion = "10.2.9"
 lazy val AkkaManagementVersion = "1.1.3"
 lazy val ScalaTestVersion = "3.2.13"
-lazy val LogbackVersion = "1.2.11"
+lazy val LogbackVersion = "1.4.0"
 
 ThisBuild / scalacOptions ++= Seq(
   "-deprecation",
