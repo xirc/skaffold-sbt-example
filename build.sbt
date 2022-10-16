@@ -9,7 +9,7 @@ ThisBuild / scalacOptions ++= Seq(
   "-Xlint",
   "-Xsource:3"
 )
-ThisBuild / scalaVersion := "2.13.9"
+ThisBuild / scalaVersion := "2.13.10"
 ThisBuild / dynverSeparator := "-"
 ThisBuild / Compile / doc / autoAPIMappings := true
 
